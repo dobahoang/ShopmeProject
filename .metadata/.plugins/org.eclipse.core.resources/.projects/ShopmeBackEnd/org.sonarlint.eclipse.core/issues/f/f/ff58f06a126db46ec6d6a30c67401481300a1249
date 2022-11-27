@@ -1,0 +1,64 @@
+
+E
+java:S5838#"Use isPositive() instead.(ÛÓÜÃHÚRMINORZ
+CODE_SMELL
+N
+java:S5786@"Remove this 'public' modifier.(ÙÍÙâúÿÿÿÿHÎRINFOZ
+CODE_SMELL
+I
+java:S5786H"Remove this 'public' modifier.(ñÇÜÉHĞRINFOZ
+CODE_SMELL
+a
+java:S2699v"-Add at least one assertion to this test case.(½’ÎK8ğ…¶Ö´0HéRBLOCKERZ
+CODE_SMELL
+U
+java:S5786n"Remove this 'public' modifier.(âÅÂÿÿÿÿÿ8ğ…¶Ö´0HêRINFOZ
+CODE_SMELL
+[
+java:S2699Q"-Add at least one assertion to this test case.(î¼¾¸HÆRBLOCKERZ
+CODE_SMELL
+N
+java:S5786"Remove this 'public' modifier.(¡ãæúÿÿÿÿHÈRINFOZ
+CODE_SMELL
+O
+java:S5786v"Remove this 'public' modifier.(½’ÎK8ğ…¶Ö´0HìRINFOZ
+CODE_SMELL
+E
+java:S58383"Use isPositive() instead.(¯éÑşHÜRMINORZ
+CODE_SMELL
+L
+java:S5838r"Use isPositive() instead.(”åå8ğ…¶Ö´0HîRMINORZ
+CODE_SMELL
+[
+java:S2699H"-Add at least one assertion to this test case.(ñÇÜÉHÅRBLOCKERZ
+CODE_SMELL
+I
+java:S5786Q"Remove this 'public' modifier.(î¼¾¸HÒRINFOZ
+CODE_SMELL
+I
+java:S5786)"Remove this 'public' modifier.(‚¦¡ÂHÊRINFOZ
+CODE_SMELL
+`
+java:S2699]"-Add at least one assertion to this test case.(Ãç´§øÿÿÿÿHÇRBLOCKERZ
+CODE_SMELL
+N
+java:S5786]"Remove this 'public' modifier.(Ãç´§øÿÿÿÿHÔRINFOZ
+CODE_SMELL
+I
+java:S5786e"Remove this 'public' modifier.(ò‚ªØHÖRINFOZ
+CODE_SMELL
+[
+java:S26998"-Add at least one assertion to this test case.(óÂôµHÄRBLOCKERZ
+CODE_SMELL
+N
+java:S5786"Remove this 'public' modifier.(ëÒ£ùùÿÿÿÿHØRINFOZ
+CODE_SMELL
+I
+java:S57868"Remove this 'public' modifier.(óÂôµHÌRINFOZ
+CODE_SMELL
+g
+java:S2699"-Add at least one assertion to this test case.(–ÙœÚşÿÿÿÿ8ç¦ºÖ´0HşRBLOCKERZ
+CODE_SMELL
+U
+java:S5786"Remove this 'public' modifier.(–ÙœÚşÿÿÿÿ8ç¦ºÖ´0HÿRINFOZ
+CODE_SMELL

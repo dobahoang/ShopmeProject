@@ -1,0 +1,24 @@
+
+j	java:S106"9Replace this use of System.out or System.err by a logger.(å‡­w8ñøôş´0H­RMAJORZ
+CODE_SMELL
+d	java:S106"9Replace this use of System.out or System.err by a logger.(¡‹àœH³RMAJORZ
+CODE_SMELL
+k	java:S106,"9Replace this use of System.out or System.err by a logger.(ïæ¿á8ï—úÿ´0H®RMAJORZ
+CODE_SMELL
+p
+java:S2095%"DUse try-with-resources or close this "Stream" in a "finally" clause.(óÒ³½úÿÿÿÿH²RBLOCKERZBUG
+k	java:S1068"9Replace this use of System.out or System.err by a logger.(ÚÚÖ8¿¶É¶0HÛRMAJORZ
+CODE_SMELL
+i	java:S106""9Replace this use of System.out or System.err by a logger.(§ä™‘øÿÿÿÿH´RMAJORZ
+CODE_SMELL
+k	java:S106*"9Replace this use of System.out or System.err by a logger.(èááò8ÕÊÿ´0H±RMAJORZ
+CODE_SMELL
+k
+java:S1118":Add a private constructor to hide the implicit public one.(®ñŒ¾ùÿÿÿÿH°RMAJORZ
+CODE_SMELL
+k	java:S1064"9Replace this use of System.out or System.err by a logger.(©İÙá8©ë§É¶0HÚRMAJORZ
+CODE_SMELL
+j	java:S106-"9Replace this use of System.out or System.err by a logger.(­—Ğ8ÕÊÿ´0H¬RMAJORZ
+CODE_SMELL
+p	java:S1060"9Replace this use of System.out or System.err by a logger.(Ò¯°Ëıÿÿÿÿ8ÕÊÿ´0H¯RMAJORZ
+CODE_SMELL

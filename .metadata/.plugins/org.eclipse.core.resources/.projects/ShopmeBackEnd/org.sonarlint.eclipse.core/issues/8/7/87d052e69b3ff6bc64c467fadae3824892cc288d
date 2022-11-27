@@ -1,0 +1,10 @@
+
+
+java:S3655?"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(ÜŸ¯Öÿÿÿÿÿ8ù·¶»´0HRMAJORZBUG
+i
+java:S2589["7Remove this expression which always evaluates to "true"(±ÙÇ8›²¤Çµ0HŠRMAJORZ
+CODE_SMELL
+z
+java:S3655g"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(„Ì¥¥ÿÿÿÿÿHRMAJORZBUG
+m
+java:S4973]"<Strings and Boxed types should be compared using "equals()".(İÿ‡İúÿÿÿÿ8ù·¶»´0HRMAJORZBUG

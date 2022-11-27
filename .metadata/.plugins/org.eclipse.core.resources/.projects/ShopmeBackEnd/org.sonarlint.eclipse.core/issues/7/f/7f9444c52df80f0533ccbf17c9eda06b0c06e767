@@ -1,0 +1,14 @@
+
+w
+java:S1192j"HDefine a constant instead of duplicating this literal "message" 7 times.(ÍÄÕ´HÉRCRITICALZ
+CODE_SMELL
+‡
+java:S1192k"SDefine a constant instead of duplicating this literal "redirect:/products" 6 times.(ªß¾ŠþÿÿÿÿHÑRCRITICALZ
+CODE_SMELL
+~
+java:S1192T"HDefine a constant instead of duplicating this literal "product" 3 times.(³Ù×Ã8Þ¼³ƒÉ0HØRCRITICALZ
+CODE_SMELL
+l
+java:S21843"@Cast one of the operands of this addition operation to a "long".(°Ú„Ï8Þ¼³ƒÉ0HÜRMINORZBUG
+x
+java:S4684]"@Replace this persistent entity with a simple POJO or DTO object.(§ß¡8Þ¼³ƒÉ0HÝRCRITICALZVULNERABILITY
