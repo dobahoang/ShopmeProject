@@ -4,10 +4,13 @@
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="CURRENCY_ID"/>
+		<item key="selection" value="toastMessage"/>
 		<item key="wrap" value="true"/>
 		<item key="incremental" value="false"/>
 		<list key="findhistory">
+			<item value="toastMessage"/>
+			<item value="Country"/>
+			<item value=" package com.shopme.admin.setting.country;"/>
 			<item value="CURRENCY_ID"/>
 			<item value="save_general"/>
 			<item value="label"/>

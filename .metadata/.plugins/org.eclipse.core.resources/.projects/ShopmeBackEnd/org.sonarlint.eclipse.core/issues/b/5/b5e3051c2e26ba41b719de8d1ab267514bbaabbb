@@ -1,0 +1,17 @@
+
+šjavascript:S2703."aAdd the "let", "const" or "var" keyword to this declaration of "optionValue" to make it explicit.(éÜ¸ÌşÿÿÿÿHÏRBLOCKERZ
+CODE_SMELL
+’javascript:S2703/"_Add the "let", "const" or "var" keyword to this declaration of "countryId" to make it explicit.(óŞ^HĞRBLOCKERZ
+CODE_SMELL
+javascript:S27031"YAdd the "let", "const" or "var" keyword to this declaration of "url" to make it explicit.(—Ïø£HÑRBLOCKERZ
+CODE_SMELL
+šjavascript:S2703?"aAdd the "let", "const" or "var" keyword to this declaration of "countryName" to make it explicit.(èÄÇ‹ÿÿÿÿÿHÒRBLOCKERZ
+CODE_SMELL
+•javascript:S2703@"aAdd the "let", "const" or "var" keyword to this declaration of "countryCode" to make it explicit.(ÖˆÕìHÓRBLOCKERZ
+CODE_SMELL
+—javascript:S2703D"^Add the "let", "const" or "var" keyword to this declaration of "jsonData" to make it explicit.(ï”‘«øÿÿÿÿHÔRBLOCKERZ
+CODE_SMELL
+£javascript:S2703Œ"iAdd the "let", "const" or "var" keyword to this declaration of "selectedCountryName" to make it explicit.(à °ÇüÿÿÿÿHÕRBLOCKERZ
+CODE_SMELL
+™javascript:S1172™"aRemove the unused function parameter "index" or rename it to "_index" to make intention explicit.(Ê×ÿÿÿÿÿHÖRMAJORZ
+CODE_SMELL

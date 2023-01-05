@@ -35,3 +35,9 @@ j
 :src/main/java/com/shopme/admin/setting/SettingService.java,1\f\1fb6a64716ddba86e35e7e5bde3fa2eff1c26349
 m
 =src/main/java/com/shopme/admin/setting/SettingController.java,0\f\0f385a127da6997782eb7115ba6ba402dad049e2
+s
+Csrc/test/java/com/shopme/admin/setting/CurrencyRepositoryTests.java,2\7\27e3db25911e13babf381ea7fffa8f37b7ab89b3
+z
+Jsrc/test/java/com/shopme/admin/setting/country/CountryRepositoryTests.java,5\4\546b028cb38efeee30542b6c56524e28a3ec293a
+a
+1src/main/resources/static/js/countries_setting.js,b\5\b5e3051c2e26ba41b719de8d1ab267514bbaabbb

@@ -5,3 +5,5 @@ c
 3src/main/java/com/shopme/setting/SettingFilter.java,3\6\3606b3ecb696794fec3fd7f1657ca4bec64b99f6
 g
 7src/main/java/com/shopme/setting/SettingRepository.java,8\3\83ccce1d96e967efb8190a75fe88a08e2e53f0b8
+l
+<src/test/java/com/shopme/setting/SettingRepositoryTests.java,d\c\dc46c263bd6908c136d1b9a9f4e5ad814a719e25

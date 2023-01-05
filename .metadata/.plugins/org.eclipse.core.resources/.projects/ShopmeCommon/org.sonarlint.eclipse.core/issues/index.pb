@@ -7,3 +7,5 @@ c
 3src/main/java/com/shopme/common/entity/Setting.java,2\7\27b39f8de5d3785f399cd0f0513353fe24a14433
 f
 6src/main/java/com/shopme/common/entity/SettingBag.java,d\8\d8561d9b103e77a0ffc54ae379d75758300df1d5
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
