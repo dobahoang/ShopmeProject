@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +22,7 @@ import com.shopme.admin.paging.PagingAndSortingParam;
 import com.shopme.admin.security.ShopmeUserDetails;
 import com.shopme.common.entity.Brand;
 import com.shopme.common.entity.Category;
-import com.shopme.common.entity.Product;
+import com.shopme.common.entity.product.Product;
 import com.shopme.common.exception.ProductNotFoundException;
 
 @Controller
@@ -42,7 +41,7 @@ public class ProductController {
 	public String listByPage(
 			@PagingAndSortingParam(listName = "listProducts", moduleURL = "/products") PagingAndSortingHelper helper,
 			@PathVariable(name = "pageNum") int pageNum, Model model,
-			@RequestParam("categoryId") Integer categoryId
+			Integer categoryId
 			) {
 		
 		productService.listByPage(pageNum, helper, categoryId);
@@ -81,8 +80,7 @@ public class ProductController {
 			@RequestParam(name = "imageIDs", required = false) String[] imageIDs,
 			@RequestParam(name = "imageNames", required = false) String[] imageNames,
 			@AuthenticationPrincipal ShopmeUserDetails loggedUser
-			) 
-					throws IOException {
+			) throws IOException {
 		
 		if (!loggedUser.hasRole("Admin") && !loggedUser.hasRole("Editor")) {
 			if (loggedUser.hasRole("Salesperson")) {
@@ -161,7 +159,6 @@ public class ProductController {
 			model.addAttribute("listBrands", listBrands);
 			model.addAttribute("pageTitle", "Edit Product (ID: " + id + ")");
 			model.addAttribute("numberOfExistingExtraImages", numberOfExistingExtraImages);
-			
 			
 			return "products/product_form";
 			
