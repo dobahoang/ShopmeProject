@@ -8,7 +8,6 @@ import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.security.authentication.RememberMeAuthenticationToken;
@@ -18,7 +17,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.shopme.Utility;
@@ -53,7 +51,7 @@ public class CustomerController {
 		
 		model.addAttribute("pageTitle", "Registration Succeeded!");
 		
-		return "/register/register_success";
+		return "register/register_success";
 	}
 
 	private void sendVerificationEmail(HttpServletRequest request, Customer customer) 
@@ -87,7 +85,7 @@ public class CustomerController {
 	}	
 	
 	@GetMapping("/verify")
-	public String verifyAccount(@RequestParam("code") String code, Model model) {
+	public String verifyAccount(String code, Model model) {
 		boolean verified = customerService.verify(code);
 		
 		return "register/" + (verified ? "verify_success" : "verify_fail");
@@ -105,8 +103,6 @@ public class CustomerController {
 		return "customer/account_form";
 	}
 	
-
-	
 	@PostMapping("/update_account_details")
 	public String updateAccountDetails(Model model, Customer customer, RedirectAttributes ra,
 			HttpServletRequest request) {
@@ -115,7 +111,18 @@ public class CustomerController {
 		
 		updateNameForAuthenticatedCustomer(customer, request);
 		
-		return "redirect:/account_details";
+		String redirectOption = request.getParameter("redirect");
+		String redirectURL = "redirect:/account_details";
+		
+		if ("address_book".equals(redirectOption)) {
+			redirectURL = "redirect:/address_book";
+		} else if ("cart".equals(redirectOption)) {
+			redirectURL = "redirect:/cart";
+		} else if ("checkout".equals(redirectOption)) {
+			redirectURL = "redirect:/address_book?redirect=checkout";
+		}
+		
+		return redirectURL;
 	}
 
 	private void updateNameForAuthenticatedCustomer(Customer customer, HttpServletRequest request) {

@@ -24,7 +24,6 @@ public class FileUploadUtil {
 		
 		try (InputStream inputStream = multipartFile.getInputStream()) {
 			Path filePath = uploadPath.resolve(fileName);
-		//	System.out.println("filePath(url sau khi them) :"+ filePath);
 			Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException ex) {
 			throw new IOException("Could not save file: " + fileName, ex);
@@ -33,36 +32,30 @@ public class FileUploadUtil {
 	
 	public static void cleanDir(String dir) {
 		Path dirPath = Paths.get(dir);
-	//System.out.println("dirPath before delete : " + dirPath);
 		
 		try {
 			Files.list(dirPath).forEach(file -> {
 				if (!Files.isDirectory(file)) {
 					try {
-			//			System.out.println("this is file : " + !Files.isDirectory(file));	
-			//			System.out.println("files  ::" + Files.list(dirPath).toString());
-			//			System.out.println("file name ::" + file);
 						Files.delete(file);
 					} catch (IOException ex) {
 						LOGGER.error("Could not delete file: " + file);
-//						System.out.println("Could not delete file: " + file);
 					}
 				}
 			});
 		} catch (IOException ex) {
 			LOGGER.error("Could not list directory: " + dirPath);
-//			System.out.println("Could not list directory: " + dirPath);
 		}
 	}
-
+	
 	public static void removeDir(String dir) {
 		cleanDir(dir);
-
+		
 		try {
 			Files.delete(Paths.get(dir));
 		} catch (IOException e) {
 			LOGGER.error("Could not remove directory: " + dir);
 		}
-		}
+		
 	}
-
+}
