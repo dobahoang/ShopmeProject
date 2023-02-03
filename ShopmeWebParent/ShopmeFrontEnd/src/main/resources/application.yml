@@ -1,7 +1,7 @@
-server:
-  port: 8082
-  servlet:
-    context-path: /Shopme
+# server:
+#   port: 8082
+#   servlet:
+#     context-path: /Shopme
 spring:
   datasource:
     password: hbstudent
