@@ -39,7 +39,7 @@ public class BrandServiceTests {
 		
 		Mockito.when(repo.findByName(name)).thenReturn(null);
 		
-		String result = service.checkUnique(id, name);
+		String result = service.checkUnique(null, name);
 		assertThat(result).isEqualTo("OK");
 	}
 	

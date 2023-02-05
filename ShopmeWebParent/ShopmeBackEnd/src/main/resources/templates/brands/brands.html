@@ -5,10 +5,17 @@
 <div class="container-fluid">
 	<div th:replace="navigation :: menu"></div>
 	<div>
-		<h2>Manage Brands</h2>	
+		<h2>Manage Brand</h2>
 		
 		<a th:href="@{/brands/new}" class="fas fa-folder-plus fa-2x icon-dark mr-2"></a>
 		<a th:href="@{/brands/export/csv}" class="fas fa-file-csv fa-2x icon-dark mr-2"></a>
+		<form method="POST" th:action="@{/brands/import/csv}" enctype="multipart/form-data">
+			<div class="form-group mt-3">
+				<label for="file">Select a CSV file</label>
+				<input type="file" name="file" class="form-control-file" id="file" accept=".csv">
+			</div>
+			<button type="submit" class="btn btn-primary">Import Users</button>
+		</form>
 	</div>
 		
 	<div th:replace="fragments :: search_form_and_message" />
