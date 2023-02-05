@@ -60,4 +60,7 @@ public class BrandService {
 		
 		return "OK";
 	}
+	public void saveAll(List<Brand> brandList) {
+		  repo.saveAll(brandList);
+	}
 }

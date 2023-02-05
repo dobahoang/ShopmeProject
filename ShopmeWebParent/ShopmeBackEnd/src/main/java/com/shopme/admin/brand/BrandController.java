@@ -1,8 +1,14 @@
 package com.shopme.admin.brand;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.util.ArrayList;
 import java.util.List;
 
+import com.opencsv.bean.CsvToBean;
+import com.opencsv.bean.CsvToBeanBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -106,5 +112,49 @@ public class BrandController {
 		}
 		
 		return defaultRedirectURL;
-	}	
+	}
+
+
+
+	@PostMapping("/brands/import/csv")
+	public String uploadCSVFile(@RequestParam("file") MultipartFile file, Model model) {
+		// validate file
+		if (file.isEmpty()) {
+			model.addAttribute("message", "Please select a CSV file to upload.");
+			model.addAttribute("status", false);
+		} else {
+			try (Reader reader = new BufferedReader(new InputStreamReader(file.getInputStream()))) {
+				CsvToBean<BrandWithCategory> csvToBean = new CsvToBeanBuilder(reader)
+						.withType(BrandWithCategory.class)
+						.withIgnoreLeadingWhiteSpace(true)
+						.build();
+				List<BrandWithCategory> brandsWithCategories = csvToBean.parse();
+
+				List<Brand> brands = new ArrayList<>();
+				// convert `BrandWithCategory` objects to `Brand` objects
+				for (BrandWithCategory bwc : brandsWithCategories) {
+					Brand brand = new Brand();
+					brand.setName(bwc.getName());
+					brand.setLogo(bwc.getLogo());
+					// find the category with the name in the CSV file or create a new one
+					Category category = categoryService.findByName(bwc.getCategoryName());
+					if (category == null) {
+						category = new Category();
+						category.setName(bwc.getCategoryName());
+					}
+					brand.getCategories().add(category);
+					brands.add(brand);
+				}
+
+				brandService.saveAll(brands);
+
+				model.addAttribute("listBrands", brands);
+				model.addAttribute("status", true);
+			} catch (Exception ex) {
+				model.addAttribute("message", "An error occurred while processing the CSV file.");
+				model.addAttribute("status", false);
+			}
+		}
+		return "brands/brands";
+	}
 }

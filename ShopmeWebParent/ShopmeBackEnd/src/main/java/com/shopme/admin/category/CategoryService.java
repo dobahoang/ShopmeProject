@@ -223,5 +223,9 @@ public class CategoryService {
 		}
 		
 		repo.deleteById(id);
-	}	
+	}
+
+	public Category findByName(String categoryName) {
+		 return repo.findByName(categoryName);
+	}
 }
